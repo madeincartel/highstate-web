@@ -48,7 +48,7 @@
 
     if (!active) {
       t.x = 0.5 + Math.sin(now * 0.19) * 0.22;
-      t.y = 0.5 + Math.cos(now * 0.13) * 0.38;
+      t.y = 0.5 + Math.cos(now * 0.13) * 0.47;
       t.g = 0;
     }
 
