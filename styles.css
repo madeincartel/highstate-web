@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   background: #050505;
   overflow-x: hidden;
+  overscroll-behavior-y: none;
   min-height: 100%;
 }
 
@@ -39,7 +40,7 @@ html, body {
   background: #050505;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  touch-action: pan-y;
+  touch-action: none;
 }
 
 .hs-glow {
@@ -48,20 +49,20 @@ html, body {
 }
 
 .hs-glow--wide {
-  inset: -20%;
+  inset: -40%;
   opacity: calc(0.25 + var(--glow) * 0.75);
   transition: opacity 1.4s cubic-bezier(.2, .7, .2, 1);
-  background: radial-gradient(45vmax 45vmax at var(--mx) var(--my), rgba(255, 255, 255, 0.30), rgba(190, 190, 190, 0.12) 38%, rgba(0, 0, 0, 0) 68%);
+  background: radial-gradient(60vmax 60vmax at var(--mx) var(--my), rgba(255, 255, 255, 0.30), rgba(190, 190, 190, 0.12) 38%, rgba(0, 0, 0, 0) 72%);
   filter: blur(28px);
   animation: hs-drift 14s ease-in-out infinite;
 }
 
 .hs-glow--core {
-  inset: -30%;
+  inset: -50%;
   mix-blend-mode: screen;
   opacity: calc(0.18 + var(--glow) * 0.5);
   transition: opacity 2s ease;
-  background: radial-gradient(28vmax 28vmax at var(--mx) var(--my), rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 62%);
+  background: radial-gradient(38vmax 38vmax at var(--mx) var(--my), rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 62%);
   filter: blur(60px);
   animation: hs-pulse 5.5s cubic-bezier(.45, 0, .35, 1) infinite;
 }

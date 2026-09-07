@@ -41,13 +41,14 @@
   hero.addEventListener('pointermove', onPointerMove);
   hero.addEventListener('pointerleave', onLeave);
   hero.addEventListener('touchstart', onTouchStart, { passive: true });
+  hero.addEventListener('touchmove', onTouchStart, { passive: true });
 
   function loop() {
     const now = (performance.now() - t0) / 1000;
 
     if (!active) {
       t.x = 0.5 + Math.sin(now * 0.19) * 0.22;
-      t.y = 0.45 + Math.cos(now * 0.13) * 0.16;
+      t.y = 0.5 + Math.cos(now * 0.13) * 0.38;
       t.g = 0;
     }
 
