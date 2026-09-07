@@ -2,8 +2,8 @@ html, body {
   margin: 0;
   padding: 0;
   background: #050505;
-  overflow: hidden;
-  height: 100%;
+  overflow-x: hidden;
+  min-height: 100%;
 }
 
 * {
@@ -27,13 +27,14 @@ html, body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #050505;
   color: #fff;
-  height: 100%;
+  min-height: 100%;
 }
 
 .hs-hero {
   position: relative;
-  height: 100vh;
-  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   overflow: hidden;
   background: #050505;
   display: grid;
@@ -71,7 +72,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 28px 32px;
+  padding: max(28px, env(safe-area-inset-top)) 32px 28px;
   font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -106,7 +107,7 @@ html, body {
   z-index: 3;
   display: grid;
   gap: clamp(18px, 3vh, 30px);
-  padding: 0 32px 32px;
+  padding: 0 32px max(32px, env(safe-area-inset-bottom));
 }
 
 .hs-services {
